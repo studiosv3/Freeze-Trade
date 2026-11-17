@@ -1,0 +1,14 @@
+-- Script Loader untuk Auto-Update
+local repoUrl = "https://pastefy.app/jSTB7qnM/raw"
+
+-- Mengambil script terbaru langsung dari GitHub
+local success, result = pcall(function()
+    return game:HttpGet(repoUrl .. "?timestamp=" .. os.time()) -- Tambah timestamp agar tidak tersimpan di cache (no-cache)
+end)
+
+if success and result then
+    -- Jalankan script utama yang baru
+    loadstring(result)()
+else
+    warn("[Loader] Gagal memuat script terbaru dari GitHub!")
+end
