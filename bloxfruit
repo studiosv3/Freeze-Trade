@@ -1,5 +1,5 @@
 -- Script Loader untuk Auto-Update
-local repoUrl = "https://pastefy.app/EoU8FXtL/raw"
+local repoUrl = "https://pastefy.app/ZwWWSHt8/raw"
 
 -- Mengambil script terbaru langsung dari GitHub
 local success, result = pcall(function()
